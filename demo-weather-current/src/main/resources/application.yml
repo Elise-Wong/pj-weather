@@ -1,2 +1,26 @@
+# server.port
 server:
   port: 8081
+
+# spring.datasource.driverClassName
+# spring.datasource.url
+spring.datasource: 
+  driverClassName: "org.postgresql.Driver"
+  url: "jdbc:postgresql://localhost:5432/bc2412"
+  username: "postgres"
+  password: "admin1234"
+
+spring.jpa:
+  show-sql: true
+  hibernate.ddl-auto: update
+
+# 以下的名稱可自定 Custom Variables
+api:
+  currentWeather:
+    hkg:
+      base-url: https://data.weather.gov.hk/weatherAPI/opendata/weather.php
+      endpoints:
+        current: rhrread      # 即時天氣
+      params:
+        lang: tc              # 繁體中文（可改為 en 或 sc）
+
